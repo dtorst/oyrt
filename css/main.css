@@ -172,6 +172,10 @@
     width:99%;
 }
 
+.carousel-control.left, .carousel-control.right {
+    background-image:none !important;
+}
+
 .center-elements {
     display:block;
     position:relative;
