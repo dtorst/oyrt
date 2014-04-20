@@ -1,0 +1,183 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+#header {
+    position:fixed;
+    display:block;
+    height:190px;
+    width:100%;
+    background-image:url('../img/top-dash.png');
+}
+
+#header-elements {
+    display:block;
+    height:90px;
+    width:62%;
+/*    background-color:#444; */
+    position:fixed;
+    left:21%;
+}
+
+.header-element {
+    height:90px;
+    display:block;
+    float:left;
+    border:1px solid black;
+    width:28%;
+}
+
+.header-element.left {
+    height:123px;
+    background-image:url('../img/maps.png');
+    background-repeat: no-repeat;
+    background-position: 20px 0px;
+    border:none;
+}
+
+.header-element.right {
+    width:30%;
+    margin-left: 50px;
+}
+
+#header-element-center {
+    position:relative;
+    top:18px;
+    border:none;
+    margin-left: 30px;
+    width:240px;
+    height:155px;
+    background-image:url('../img/rear-view.png');
+    background-repeat: no-repeat;
+}
+
+#background {
+    display:block;
+    width:100%;
+    top:50px;
+    height:720px;
+    position:absolute;
+    background-color:blue;
+    z-index:-3;
+}
+
+#footer {
+    display:block;
+    position:fixed;
+    top:487px;
+    height:215px;
+    width:100%;
+    background-image:url('../img/bottom-dash.png');
+}
+
+#footer-elements {
+    display:block;
+    height:170px;
+    width:100%;
+/*    background-color:#444; */
+    position:fixed;
+    left:0%;
+}
+
+#footer-elements-left {
+    width:35%;
+}
+
+.footer-element {
+    width:30%;
+    height:170px;
+    display:block;
+    float:left;
+/*    border:1px solid black; */
+}
+
+#left-footer-left {
+    position:relative;
+    top:83px;
+    display:block;
+/*    background-color:brown;  */
+    border:1px solid black;
+    float:left;
+    height:85px;
+    width:42%;
+}
+
+#left-footer-right {
+    position:relative;
+    top:15px;
+    left:40px;
+    display:block;
+/*    background-color:brown;  
+    border:1px solid black; */
+    background-image:url('../img/steering-wheel.png');
+    float:left;
+    height:200px;
+    width:204px;
+}
+
+#center-footer-main {
+    position:relative;
+    top:50px;
+    display:block;
+/*    background-color:brown; 
+    border:1px solid black; */
+    float:left;
+    margin-left:20px;
+    height:130px;
+    width:99%;
+}
+
+#buttons {
+    position: absolute;
+    left:40px;
+    top:15px;
+    height:130px;
+}
+
+.radio-button {
+    float: left;
+    display: block;
+    width:30px;
+    height: 30px;
+    margin:10px 10px;
+    background-image:url('../img/knob.png');
+}
+
+.radio-button:hover,.radio-button:active {
+    background-image:url('../img/knob-hover.png');
+}
+
+#bobbles {
+    position: absolute;
+    left:70px;
+}
+
+.single-bobble {
+    float: left;
+    display: block;
+    width:40px;
+    height: 100px;
+    margin:0px 10px;
+    border:1px solid white;
+}
+
+#right-footer-main {
+    position:relative;
+    top:1px;
+    display:block;
+/*    background-color:brown;
+    border:1px solid black; */
+    float:left;
+    height:130px;
+    width:99%;
+}
+
+.center-elements {
+    display:block;
+    position:relative;
+    margin:0 auto;
+    top:50px;
+    width:500px;
+    height:350px;
+    border:1px solid white;
+}
