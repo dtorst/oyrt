@@ -32,8 +32,18 @@
             </div><!--/header-elements-left--></a>
             <a data-toggle="modal" data-backdrop="false" href="pages/about.html" data-target="#about"><div class="header-element" id="header-element-center">
             </div><!--/header-elements-center--></a>
-            <a data-toggle="modal" data-backdrop="false" href="pages/social.html" data-target="#social"><div class="header-element right">social media
-            </div><!-- /header-elements-right --></a>
+            <div class="header-element right">
+              <a href="http://www.facebook.com/oneyearroadtrip" target="_blank"><div class="social-icon facebook">
+              </div><!-- /social-icon --></a>
+              <a href="http://www.instagram.com/oneyearroadtrip" target="_blank"><div class="social-icon instagram">
+              </div><!-- /social-icon --></a>
+              <a href="http://www.pinterest.com/oneyearroadtrip" target="_blank"><div class="social-icon pinterest">
+              </div><!-- /social-icon --></a>
+              <a href="http://www.twitter.com/oneyearroadtrip" target="_blank"><div class="social-icon twitter">
+              </div><!-- /social-icon --></a>
+              <a href="http://www.youtube.com/oneyearroadtrip" target="_blank"><div class="social-icon youtube">
+              </div><!-- /social-icon --></a>
+            </div><!-- /header-elements-right -->
         </div><!--/header-elements-->
     </div><!--/header-->
     <div id="background">background
@@ -53,6 +63,12 @@
           <img src="img/farm-1300.jpg" alt="Fourth slide">
         </div>
       </div>
+      <ol class="carousel-indicators" style="z-index:1000;top:180px;position:fixed;">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+      </ol>
     </div>
   </div> <!-- /bg-carousel -->
 
@@ -75,14 +91,6 @@
 
 <!-- CONTACT MODAL -->
 <div id="contact" class="modal fade" style="top:155px;">
-  <div class="modal-dialog">
-    <div class="modal-content">
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-<!-- BUS MODAL -->
-<div id="bus" class="modal fade" style="top:155px;">
   <div class="modal-dialog">
     <div class="modal-content">
     </div><!-- /.modal-content -->
@@ -161,14 +169,6 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-<!-- SOCIAL MODAL -->
-<div id="social" class="modal fade" style="top:155px;">
-  <div class="modal-dialog">
-    <div class="modal-content">
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
 
 <!--
 on main page:
@@ -203,12 +203,6 @@ on main page:
                     <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left"></span>
       </a>
-            <ol class="carousel-indicators">
-        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-      </ol>
       <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
         <span class="glyphicon glyphicon-chevron-right"></span>
       </a>
@@ -227,7 +221,7 @@ on main page:
                         </div><!--/radio-button 4--></a>
                     </div><!--/buttons-->
                     <div id="radio-readout">
-                      <h3 id="readout" style="color:white;margin-top:3px;margin-left:10px;">&nbsp;</h3>
+                      <h3 id="readout">&nbsp;</h3>
                     </div><!-- /radio-readout -->
                 </div>
             </div><!--/footer-elements-center-->

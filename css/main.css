@@ -23,7 +23,6 @@
     height:90px;
     display:block;
     float:left;
-    border:1px solid black;
     width:28%;
 }
 
@@ -32,18 +31,70 @@
     background-image:url('../img/maps.png');
     background-repeat: no-repeat;
     background-position: 20px 0px;
-    border:none;
 }
 
 .header-element.right {
-    width:30%;
+    margin-top:10px;
+    width:250px;
     margin-left: 50px;
+}
+
+.social-icon {
+    float:left;
+    display:block;
+    height:48px;
+    width:48px;
+    margin-top:41px;
+}
+
+.facebook {
+    background:url('../img/social-sprite.png');
+    background-position: 0px 48px;
+}
+
+.facebook:hover {
+    background-position: 0px 0px;
+}
+
+.instagram {
+    background:url('../img/social-sprite.png');
+    background-position: -48px 48px;
+}
+
+.instagram:hover {
+    background-position: -48px 0px;
+}
+
+.pinterest {
+    background:url('../img/social-sprite.png');
+    background-position: -96px 48px;
+}
+
+.pinterest:hover {
+    background-position: -96px 0px;
+}
+
+.twitter {
+    background:url('../img/social-sprite.png');
+    background-position: -144px 48px;
+}
+
+.twitter:hover {
+    background-position: -144px 0px;
+}
+
+.youtube {
+    background:url('../img/social-sprite.png');
+    background-position: -192px 48px;
+}
+
+.youtube:hover {
+    background-position: -192px 0px;
 }
 
 #header-element-center {
     position:relative;
     top:18px;
-    border:none;
     margin-left: 30px;
     width:240px;
     height:155px;
@@ -153,6 +204,12 @@
     width:250px;
     top:80px;
     left:45px;
+}
+
+#readout {
+    color:white;
+    margin-top:4px;
+    margin-left:10px;
 }
 
 #bobbles {
