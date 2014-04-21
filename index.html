@@ -217,15 +217,18 @@ on main page:
             <div class="footer-element" id="footer-elements-center">
                 <div class="center-footer-element" id="center-footer-main">
                     <div id="buttons">
-                        <a data-toggle="modal" data-backdrop="false" href="pages/kids.html" data-target="#kids"><div class="radio-button">
+                        <a data-toggle="modal" data-backdrop="false" href="pages/kids.html" data-target="#kids"><div class="radio-button" id="radio-button-1">
                         </div><!--/radio-button 1--></a>
-                       <a data-toggle="modal" data-backdrop="false" href="pages/roadschool.html" data-target="#school"><div class="radio-button">
+                       <a data-toggle="modal" data-backdrop="false" href="pages/roadschool.html" data-target="#school"><div class="radio-button" id="radio-button-2">
                         </div><!--/radio-button 2--></a>
-                       <a data-toggle="modal" data-backdrop="false" href="pages/support.html" data-target="#support"><div class="radio-button">
+                       <a data-toggle="modal" data-backdrop="false" href="pages/support.html" data-target="#support"><div class="radio-button" id="radio-button-3">
                         </div><!--/radio-button 3--></a>
-                       <a data-toggle="modal" data-backdrop="false" href="pages/blog.html" data-target="#blog"><div class="radio-button">
+                       <a data-toggle="modal" data-backdrop="false" href="pages/blog.html" data-target="#blog"><div class="radio-button" id="radio-button-4">
                         </div><!--/radio-button 4--></a>
                     </div><!--/buttons-->
+                    <div id="radio-readout">
+                      <h3 id="readout" style="color:white;margin-top:3px;margin-left:10px;">&nbsp;</h3>
+                    </div><!-- /radio-readout -->
                 </div>
             </div><!--/footer-elements-center-->
             <div class="footer-element" id="footer-elements-right" style="">
@@ -253,5 +256,42 @@ on main page:
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function()
+    {
+    $("#radio-button-1").hover(
+      function () {
+         $("#readout").text("kids");
+        },
+        function () {
+         $("#readout").text("");
+        }
+        );
+    $("#radio-button-2").hover(
+      function () {
+         $("#readout").text("road school");
+        },
+        function () {
+         $("#readout").text("");
+        }
+        );
+    $("#radio-button-3").hover(
+      function () {
+         $("#readout").text("support");
+        },
+        function () {
+         $("#readout").text("");
+        }
+        );
+    $("#radio-button-4").hover(
+      function () {
+         $("#readout").text("blog");
+        },
+        function () {
+         $("#readout").text("");
+        }
+        );
+    });
+</script>
   </body>
 </html>
