@@ -187,11 +187,13 @@
     width:30px;
     height: 30px;
     margin:10px 10px;
-    background-image:url('../img/knob.png');
+    background-image:url('../img/knob-sprite.png');
+    background-position: 0px 30px;
 }
 
 .radio-button:hover,.radio-button:active {
-    background-image:url('../img/knob-hover.png');
+    background-image:url('../img/knob-sprite.png');
+    background-position: 0px 0px;
 }
 
 #radio-readout {
