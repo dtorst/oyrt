@@ -206,7 +206,8 @@
 
 #readout {
     color:white;
-    margin-top:4px;
+    font-family: 'Special Elite', 'cursive';
+    margin-top:8px;
     margin-left:10px;
 }
 
@@ -225,7 +226,9 @@
 }
 
 .modal-content {
-    background:rgba(255,255,255,0.6);
+    background:rgba(255,255,255,0.7);
+    border:none;
+    border-radius: 5px;
 }
 
 #right-footer-main {
@@ -235,6 +238,14 @@
     float:left;
     height:130px;
     width:99%;
+}
+
+.land-slide.first {
+    height:720px;
+    width:1300px;
+    display:block;
+    background-image:url('../img/rockies-1300.jpg');
+    color:#fff;
 }
 
 .carousel-control.left, .carousel-control.right {
