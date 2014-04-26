@@ -8,6 +8,8 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-modal-bs3patch.css" rel="stylesheet">
+    <link href="css/bootstrap-modal.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
 
@@ -31,9 +33,10 @@
         <div id="header-elements">
             <a data-toggle="modal" data-backdrop="false" href="pages/route.html" data-target="#route"><div class="header-element left" data-toggle="tooltip" data-placement="bottom" title="map">
             </div><!--/header-elements-left--></a>
+
             <!-- MAP MODAL -->
-<div id="route" class="modal fade" role="dialog" style="top:15px;">
-  <div class="modal-dialog modal-lg">
+<div id="route" class="modal container fade" style="display:none;">
+  <div class="modal">
     <div class="modal-content" style="background:rgba(255,255,255,1)";>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
@@ -173,26 +176,6 @@
 </div><!-- /.modal -->
 
 
-<!--
-on main page:
-
-1. map -> the map/tour
-2. rear-view -> blog
-3. right visor -> social media
-4. steering wheel -> the bus
-5. first radio knob -> the kids
-6. 2nd radio knob -> road school
-7. 3rd radio knob -> support
-8. 4th radio knob -> about
-9. cb radio -> contact
-10. meet the family:
-    10a. Matt
-    10b. Eva
-    10c. Jack
-    10d. Solveig
-    10e. Evie
--->
-
     </div><!--/background-->
         <div id="footer">
         <div id="footer-elements">
@@ -260,6 +243,8 @@ on main page:
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-modalmanager.js"></script>
 <script type="text/javascript">
 $(document).ready(function()
     {
