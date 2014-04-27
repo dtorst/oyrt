@@ -71,7 +71,7 @@
     </div><!--/header-->
     <div id="background">
   <div class="bg-carousel" style="position:relative;height:720px;width:1300px;display:block;">
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
       <div class="carousel-inner">
         <div class="item active">
           <div class="land-slide first">
@@ -262,6 +262,78 @@
 <script type="text/javascript">
 $(document).ready(function()
     {
+    $("#family-link").hover(
+      function () {
+         $("#readout").text("the Webb family");
+        },
+        function () {
+         $("#readout").text("");
+        }
+        );
+    $(".facebook").hover(
+      function () {
+         $("#readout").text("facebook");
+        },
+        function () {
+         $("#readout").text("");
+        }
+        );
+    $(".twitter").hover(
+      function () {
+         $("#readout").text("twitter");
+        },
+        function () {
+         $("#readout").text("");
+        }
+        );
+    $(".instagram").hover(
+      function () {
+         $("#readout").text("instagram");
+        },
+        function () {
+         $("#readout").text("");
+        }
+        );
+    $(".pinterest").hover(
+      function () {
+         $("#readout").text("pinterest");
+        },
+        function () {
+         $("#readout").text("");
+        }
+        );
+    $(".youtube").hover(
+      function () {
+         $("#readout").text("youtube");
+        },
+        function () {
+         $("#readout").text("");
+        }
+        );
+    $("#contact-link").hover(
+      function () {
+         $("#readout").text("contact us");
+        },
+        function () {
+         $("#readout").text("");
+        }
+        );
+    $("#about-link").hover(
+      function () {
+         $("#readout").text("about OYRT");
+        },
+        function () {
+         $("#readout").text("");
+        }
+        );
+    $("#route-link").hover(
+      function () {
+         $("#readout").text("the route");
+        },
+        function () {
+         $("#readout").text("");
+        }
+        );
     $("#radio-button-1").hover(
       function () {
          $("#readout").text("the kids");

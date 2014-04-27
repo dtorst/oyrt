@@ -238,6 +238,9 @@
     margin:0px 10px;
     border:1px solid white;
 }
+a {
+    cursor:pointer;
+}
 
 h3 {
     font-family: 'Satisfy', 'cursive';
