@@ -176,30 +176,14 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-<!-- TESTING FOR PLUGIN FUNCTIONALITY -->
-<div id="ajax-modal" class="modal container fade" data-backdrop="false" tabindex="-1" style="display: none;background:rgba(255,255,255,0.7);
+<!-- FAMILY MODAL -->
+<div id="family" class="modal container fade" data-backdrop="false" tabindex="-1" style="display: none;background:rgba(255,255,255,0.7);
     border:none;
     border-radius: 5px;"></div>
 <div id="long" class="modal fade" tabindex="-1" data-replace="true" style="display: none;">
   <div class="modal-dialog">
     <div class="modal-content">
     </div>
-  </div>
-</div>
-
-<div id="notlong" class="modal fade" tabindex="-1" data-replace="true" style="display: none;">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-    <h4 class="modal-title">Not That Long</h4>
-  </div>
-  <div class="modal-body">
-    <button class="btn btn-default" data-toggle="modal" href="#verylong" style="position: absolute; top: 50%; right: 12px">Very Long Modal</button>
-    <div style="height: 400px; overflow: hidden;">
-      <img style="height: 800px" src="http://i.imgur.com/KwPYo.jpg" />
-    </div>
-  </div>
-  <div class="modal-footer">
-    <button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
   </div>
 </div>
 
@@ -313,13 +297,13 @@ $(document).ready(function()
 
 <script id="ajax" type="text/javascript">
 
-var $familyModal = $('#ajax-modal');
+var $familyModal = $('#family');
 
 $('#family-link').on('click', function(){
   // create the backdrop and wait for next modal to be triggered
 
   setTimeout(function(){
-     $familyModal.load('pages/ajax.html', '', function(){
+     $familyModal.load('pages/family.html', '', function(){
       $familyModal.modal();
     });
   }, 0);
