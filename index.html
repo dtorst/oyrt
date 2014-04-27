@@ -217,7 +217,7 @@
                         </div><!--/radio-button 2--></a>
                        <a data-toggle="modal" id="support-link"><div class="radio-button" id="radio-button-3">
                         </div><!--/radio-button 3--></a>
-                       <a data-toggle="modal" id="blog-link"><div class="radio-button" id="radio-button-4">
+                       <a data-toggle="modal" id="team-link"><div class="radio-button" id="radio-button-4">
                         </div><!--/radio-button 4--></a>
                     </div><!--/buttons-->
                     <div id="radio-readout">
@@ -256,6 +256,8 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap-modal.js"></script>
     <script src="js/bootstrap-modalmanager.js"></script>
@@ -360,7 +362,7 @@ $(document).ready(function()
         );
     $("#radio-button-4").hover(
       function () {
-         $("#readout").text("blog");
+         $("#readout").text("the team");
         },
         function () {
          $("#readout").text("");
@@ -472,11 +474,11 @@ $('#support-link').on('click', function(){
 <script id="blog-modal" type="text/javascript">
 var $blogModal = $('#blog');
 
-$('#blog-link').on('click', function(){
+$('#team-link').on('click', function(){
   // create the backdrop and wait for next modal to be triggered
 
   setTimeout(function(){
-     $blogModal.load('pages/blog.html', '', function(){
+     $blogModal.load('pages/team.html', '', function(){
       $blogModal.modal();
     });
   }, 0);
