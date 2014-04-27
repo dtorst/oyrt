@@ -31,19 +31,27 @@
 <div id="container">
     <div id="header">
         <div id="header-elements">
-            <a data-toggle="modal" data-backdrop="false" href="pages/route.html" data-target="#route"><div class="header-element left" data-toggle="tooltip" data-placement="bottom" title="map">
+            <a id="route-link" data-toggle="modal" data-backdrop="false"><div class="header-element left" data-toggle="tooltip" data-placement="bottom" title="map">
             </div><!--/header-elements-left--></a>
 
             <!-- MAP MODAL -->
-<div id="route" class="modal container fade" style="display:none;">
+<div id="route" class="modal container fade" data-backdrop="false" style="display:none;">
   <div class="modal">
     <div class="modal-content" style="background:rgba(255,255,255,1)";>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+<!-- ABOUT MODAL -->
+<div id="about" class="modal container fade" style="display:none;">
+  <div class="modal">
+    <div class="modal-content">
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
-            <a data-toggle="modal" data-backdrop="false" href="pages/about.html" data-target="#about"><div class="header-element" id="header-element-center">
+
+            <a id="about-link" data-toggle="modal"><div class="header-element" id="header-element-center">
             </div><!--/header-elements-center--></a>
             <div class="header-element right">
               <a href="http://www.facebook.com/oneyearroadtrip" target="_blank"><div class="social-icon facebook">
@@ -87,49 +95,42 @@
     </div>
   </div> <!-- /bg-carousel -->
 
-<!-- ABOUT MODAL -->
-<div id="about" class="modal fade" style="top:155px;">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
 
 <!-- CONTACT MODAL -->
-<div id="contact" class="modal fade" style="top:155px;">
-  <div class="modal-dialog">
+<div id="contact" class="modal fade" data-backdrop="false" style="z-index:-2;">
+  <div class="modal">
     <div class="modal-content">
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
 <!-- KIDS MODAL -->
-<div id="kids" class="modal fade" style="top:155px;">
-  <div class="modal-dialog">
+<div id="kids" class="modal fade">
+  <div class="modal">
     <div class="modal-content">
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
 <!-- SCHOOL MODAL -->
-<div id="school" class="modal fade" style="top:155px;">
-  <div class="modal-dialog">
+<div id="school" class="modal fade">
+  <div class="modal">
     <div class="modal-content">
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
 <!-- SUPPORT MODAL -->
-<div id="support" class="modal fade" style="top:155px;">
-  <div class="modal-dialog">
+<div id="support" class="modal fade">
+  <div class="modal">
     <div class="modal-content">
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
 <!-- BLOG MODAL -->
-<div id="blog" class="modal fade" style="top:155px;">
-  <div class="modal-dialog">
+<div id="blog" class="modal fade">
+  <div class="modal">
     <div class="modal-content">
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
@@ -207,7 +208,7 @@
         <div id="footer">
         <div id="footer-elements">
             <div class="footer-element" id="footer-elements-left">
-                <a data-toggle="modal" data-backdrop="false" href="pages/contact.html" data-target="#contact"><div class="left-footer-element" id="left-footer-left">
+                <a data-toggle="modal" id="contact-link"><div class="left-footer-element" id="left-footer-left">
                 </div><!--/left-footer-left--></a>
 
 <!--   this is the original link that was in the steering wheel section, the "about the bus" page             <a data-toggle="modal" data-backdrop="false" href="pages/bus.html" data-target="#bus"> -->
@@ -224,13 +225,13 @@
             <div class="footer-element" id="footer-elements-center">
                 <div class="center-footer-element" id="center-footer-main">
                     <div id="buttons">
-                        <a data-toggle="modal" data-backdrop="false" href="pages/kids.html" data-target="#kids"><div class="radio-button" id="radio-button-1">
+                        <a id="kids-link" data-toggle="modal"><div class="radio-button" id="radio-button-1">
                         </div><!--/radio-button 1--></a>
-                       <a data-toggle="modal" data-backdrop="false" href="pages/roadschool.html" data-target="#school"><div class="radio-button" id="radio-button-2">
+                       <a data-toggle="modal" id="roadschool-link"><div class="radio-button" id="radio-button-2">
                         </div><!--/radio-button 2--></a>
-                       <a data-toggle="modal" data-backdrop="false" href="pages/support.html" data-target="#support"><div class="radio-button" id="radio-button-3">
+                       <a data-toggle="modal" id="support-link"><div class="radio-button" id="radio-button-3">
                         </div><!--/radio-button 3--></a>
-                       <a data-toggle="modal" data-backdrop="false" href="pages/blog.html" data-target="#blog"><div class="radio-button" id="radio-button-4">
+                       <a data-toggle="modal" id="blog-link"><div class="radio-button" id="radio-button-4">
                         </div><!--/radio-button 4--></a>
                     </div><!--/buttons-->
                     <div id="radio-readout">
@@ -312,19 +313,116 @@ $(document).ready(function()
 
 <script id="ajax" type="text/javascript">
 
-var $modal = $('#ajax-modal');
+var $familyModal = $('#ajax-modal');
 
 $('#family-link').on('click', function(){
   // create the backdrop and wait for next modal to be triggered
 
   setTimeout(function(){
-     $modal.load('pages/ajax.html', '', function(){
-      $modal.modal();
+     $familyModal.load('pages/ajax.html', '', function(){
+      $familyModal.modal();
     });
   }, 0);
 });
 
 </script> 
 
+<script id="route-modal" type="text/javascript">
+var $routeModal = $('#route');
+
+$('#route-link').on('click', function(){
+  // create the backdrop and wait for next modal to be triggered
+
+  setTimeout(function(){
+     $routeModal.load('pages/route.html', '', function(){
+      $routeModal.modal();
+    });
+  }, 0);
+});
+</script> 
+
+<script id="about-modal" type="text/javascript">
+var $aboutModal = $('#about');
+
+$('#about-link').on('click', function(){
+  // create the backdrop and wait for next modal to be triggered
+
+  setTimeout(function(){
+     $aboutModal.load('pages/about.html', '', function(){
+      $aboutModal.modal();
+    });
+  }, 0);
+});
+</script> 
+
+<script id="contact-modal" type="text/javascript">
+var $contactModal = $('#contact');
+
+$('#contact-link').on('click', function(){
+  // create the backdrop and wait for next modal to be triggered
+
+  setTimeout(function(){
+     $contactModal.load('pages/contact.html', '', function(){
+      $contactModal.modal();
+    });
+  }, 0);
+});
+</script> 
+
+<script id="kids-modal" type="text/javascript">
+var $kidsModal = $('#kids');
+
+$('#kids-link').on('click', function(){
+  // create the backdrop and wait for next modal to be triggered
+
+  setTimeout(function(){
+     $kidsModal.load('pages/kids.html', '', function(){
+      $kidsModal.modal();
+    });
+  }, 0);
+});
+</script> 
+
+<script id="roadschool-modal" type="text/javascript">
+var $roadschoolModal = $('#roadschool');
+
+$('#roadschool-link').on('click', function(){
+  // create the backdrop and wait for next modal to be triggered
+
+  setTimeout(function(){
+     $roadschoolModal.load('pages/roadschool.html', '', function(){
+      $roadschoolModal.modal();
+    });
+  }, 0);
+});
+</script> 
+
+<script id="support-modal" type="text/javascript">
+var $supportModal = $('#support');
+
+$('#support-link').on('click', function(){
+  // create the backdrop and wait for next modal to be triggered
+
+  setTimeout(function(){
+     $supportModal.load('pages/support.html', '', function(){
+      $supportModal.modal();
+    });
+  }, 0);
+});
+</script> 
+
+<script id="blog-modal" type="text/javascript">
+var $blogModal = $('#blog');
+
+$('#blog-link').on('click', function(){
+  // create the backdrop and wait for next modal to be triggered
+
+  setTimeout(function(){
+     $blogModal.load('pages/blog.html', '', function(){
+      $blogModal.modal();
+    });
+  }, 0);
+});
+</script> 
   </body>
 </html>
