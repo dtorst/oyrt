@@ -175,6 +175,31 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+<!-- TESTING FOR PLUGIN FUNCTIONALITY -->
+<div id="ajax-modal" class="modal container fade" tabindex="-1" style="display: none;"></div>
+<div id="long" class="modal fade" tabindex="-1" data-replace="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    </div>
+  </div>
+</div>
+
+<div id="notlong" class="modal fade" tabindex="-1" data-replace="true" style="display: none;">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h4 class="modal-title">Not That Long</h4>
+  </div>
+  <div class="modal-body">
+    <button class="btn btn-default" data-toggle="modal" href="#verylong" style="position: absolute; top: 50%; right: 12px">Very Long Modal</button>
+    <div style="height: 400px; overflow: hidden;">
+      <img style="height: 800px" src="http://i.imgur.com/KwPYo.jpg" />
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
+  </div>
+</div>
+
 
     </div><!--/background-->
         <div id="footer">
@@ -214,8 +239,8 @@
             <div class="footer-element" id="footer-elements-right" style="">
                 <div class="right-footer-element" id="right-footer-main">
 
-<div id="family-portrait">
-</div><!-- /family-portrait -->
+<a id="family-link" href="#" data-backdrop="false" data-toggle="modal"><div id="family-portrait">
+</div><!-- /family-portrait --></a>
 
 <!-- FOR ADDING BOBBLE HEADS LATER, re-add the second dash in the closing comment brackets under each div
                     <div id="bobbles">
@@ -282,5 +307,22 @@ $(document).ready(function()
         );
     });
 </script>
+
+<script id="ajax" type="text/javascript">
+
+var $modal = $('#ajax-modal');
+
+$('#family-link').on('click', function(){
+  // create the backdrop and wait for next modal to be triggered
+
+  setTimeout(function(){
+     $modal.load('pages/ajax.html', '', function(){
+      $modal.modal();
+    });
+  }, 0);
+});
+
+</script> 
+
   </body>
 </html>
