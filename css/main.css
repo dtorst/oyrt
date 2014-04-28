@@ -27,6 +27,8 @@
 }
 
 .header-element.left {
+    position: fixed;
+    left:270px;
     height:123px;
     background-image:url('../img/maps.png');
     background-repeat: no-repeat;
@@ -34,9 +36,10 @@
 }
 
 .header-element.right {
+    position:fixed;
     margin-top:10px;
     width:260px;
-    margin-left: 50px;
+    left: 810px;
 }
 
 .social-icon {
@@ -93,9 +96,9 @@
 }
 
 #header-element-center {
-    position:relative;
+    position:fixed;
     top:18px;
-    margin-left: 30px;
+    left: 530px;
     width:240px;
     height:155px;
     background-image:url('../img/rear-view.png');
@@ -157,9 +160,9 @@
 }
 
 #left-footer-right {
-    position:relative;
-    top:15px;
-    left:30px;
+    position:fixed;
+    top:502px;
+    left:230px;
     display:block;
     background-image:url('../img/steering-wheel.png');
     float:left;
@@ -178,9 +181,9 @@
 }
 
 #buttons {
-    position: absolute;
-    left:40px;
-    top:15px;
+    position: fixed;
+    left:510px;
+    top:555px;
     height:60px;
 }
 
@@ -215,8 +218,8 @@
 }
 
 #family-portrait {
-    position:absolute;
-    left:120px;
+    position:fixed;
+    left:970px;
     margin-top:-35px;
     width:250px;
     height:150px;
