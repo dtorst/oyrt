@@ -1,0 +1,9 @@
+.DS_Store
+blog/
+bus/
+cgi-bin/
+error_log
+htdocs/
+old/
+wp-content/
+.htaccess
