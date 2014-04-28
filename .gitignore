@@ -7,3 +7,6 @@ htdocs/
 old/
 wp-content/
 .htaccess
+*.shtml
+500.php
+*.ico
