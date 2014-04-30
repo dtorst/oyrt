@@ -146,8 +146,8 @@
 }
 
 #left-footer-left {
-    position:relative;
-    top:70px;
+    position:fixed;
+    bottom:0px;
     display:block;
 /*    background-color:brown;  
     border:1px solid black; */
@@ -161,7 +161,7 @@
 
 #left-footer-right {
     position:fixed;
-    top:502px;
+    bottom:0px;
     left:230px;
     display:block;
     background-image:url('../img/steering-wheel.png');
@@ -171,8 +171,8 @@
 }
 
 #center-footer-main {
-    position:relative;
-    top:50px;
+    position:fixed;
+    bottom:0px;
     display:block;
     float:left;
     margin-left:20px;
@@ -183,7 +183,7 @@
 #buttons {
     position: fixed;
     left:510px;
-    top:580px;
+    bottom:85px;
     height:60px;
 }
 
@@ -203,11 +203,11 @@
 }
 
 #radio-readout {
-    position: absolute;
+    position:fixed;
     height:35px;
     width:250px;
-    top:80px;
-    left:45px;
+    bottom:50px;
+    left:510px;
 }
 
 #readout {
@@ -219,8 +219,8 @@
 
 #family-portrait {
     position:fixed;
-    left:970px;
-    margin-top:-35px;
+    left:920px;
+    bottom:110px;
     width:250px;
     height:150px;
     display:block;
@@ -267,8 +267,8 @@ p, span {
 }
 
 #right-footer-main {
-    position:relative;
-    top:1px;
+    position:fixed;
+    bottom:0px;
     display:block;
     float:left;
     height:130px;
