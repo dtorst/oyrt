@@ -3,35 +3,20 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <title>Remote file for Bootstrap Modal</title>  
+         <script type="text/javascript">
+   $(document).ready(function() {
+          $.getJSON('http://blog.oneyearroadtrip.com/support/?json=1', function(jd) {
+             $('#ajaxload').html(jd.page.content);
+          });
+   });
+   </script>
 </head>
 <body>
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                  <h3 class="modal-title">Support OneYearRoadTrip</h3>
             </div>            <!-- /modal-header -->
-            <div class="modal-body">
-<p>There are LOTS of ways to support OneYearRoadTrip. From <a title="Tax-Deductible Cash Donations" href="https://www.fracturedatlas.org/site/fiscal/profile?id=7895" target="_blank">cash donations</a> to <a title="Non-Cash Donations Page" href="http://oneyearroadtrip.com/non-cash-donations/" target="_blank">buying or donating stuff we need</a> to helping us find kids...there are many ways to play a role. Join us in this adventure and help kids across America CHANGE THE WORLD!</p><br>
-
-<iframe width="450" height="253" src="//www.youtube.com/embed/rMJCh53R9po" frameborder="0" allowfullscreen></iframe><br><br>
-
-<p><h4 style="font-style: normal; line-height: 24.375px;"><b>1. Support with Cash: </b></h4>
-We are THRILLED to have Fractured Atlas* as a fiscal sponsor for our project! This means that <a title="OYRT Fractured Atlas Page" href="https://www.fracturedatlas.org/site/fiscal/profile?id=7895" target="_blank"><span style="text-decoration: underline;">ALL CASH DONATIONS ARE TAX DEDUCTIBLE</span></a>!  <a title="OYRT Fractured Atlas Page" href="https://www.fracturedatlas.org/site/fiscal/profile?id=7895" target="_blank">Click this Fractured Atlas link</a> and join the community!</p><br>
-
-<h4>2. Purchase or Donate Stuff We Need:</h4>
-<p>Fractured Atlas can also process non-cash donations. Non-cash donations include <span style="text-decoration: underline;">anything you can touch</span> (except vehicles), and the process is fairly simple. If you'd like to make a non-cash donation, <a title="mail to: oneyearroadtrip@gmail.com" href="oneyearroadtrip@gmail.com" target="_blank">send us an email</a> and we'll walk you through the process!</p><br>
-
-<h4>3. Send Stories of Amazing Kids:</h4>
-<p>If you come across a story of a change-making kid somewhere in America who is making the world a better place, <a title="Mail to: oneyearroadtrip@gmail.com" href="oneyearroadtrip@gmail.com" target="_blank"><span style="text-decoration: underline;">send that story along</span></a>! Forward stories to <a title="Mail To: oneyearroadtrip@gmail.com" href="oneyearroadtrip@gmail.com" target="_blank">oneyearroadtrip@gmail.com</a>.</p><br>
-
-<h4>3. Follow Our Journey &amp; Spread the Word:</h4>
-<p>There's so much to see, experience and learn along the way, be sure not to miss a minute of our journey toward a better tomorrow. Subscribe to this <span style="text-decoration: underline;"><a title="OYRT Website" href="http://oneyearroadtrip.com" target="_blank">blog</a></span>, follow us on <a title="OYRT Facebook Page" href="http://facebook.com/oneyearroadtrip" target="_blank">Facebook</a>, <a title="OYRT Twitter Page" href="http://twitter.com/oneyearroadtrip" target="_blank">Twitter</a>, or <a title="OYRT Instagram Page" href="http://instagram.com/oneyearroadtrip" target="_blank">Instagram</a>, and subscribe to us on <a title="OYRT YouTube Channel" href="http://youtube.com/oneyearroadtrip" target="_blank">YouTube.</a></p><br>
-
-<h4>4. Lift Our Spirits:</h4>
-<p>This is a long, crazy, ambitious project and we need all the love we can get. If you pray, offer one up on our behalf and on behalf of the amazing kids we're meeting. If you have a word of encouragement, post it, email it, tweet it or sky write it. If you are a hugger, you'll fit right in with our family. Whatever you can do to up the L.O.V.E, bring it!</p>
-
-<p>However you choose to support OneYearRoadTrip, we thank you. Ultimately, it's all going toward the empowerment of kids across America to be change-agents for good. Hallelujah and GO BE AWESOME!</p><br>
-
-<p><em><a href="http://oneyearroadtrip.com/wp-content/uploads/2013/11/fa-logo.png" style="float:left;margin-right:5px;"><img class="alignright size-full wp-image-316" src="http://oneyearroadtrip.com/wp-content/uploads/2013/11/fa-logo.png" alt="FA logo" width="174" height="120" /></a></em><em>*OneYearRoadTrip is a sponsored project of <a title="Fractured Atlas OYRT Page" href="https://www.fracturedatlas.org/site/fiscal/profile?id=7895" target="_blank">Fractured Atlas</a>, a non-profit arts service organization. Contributions for the charitable purposes of OneYearRoadTrip must be made payable to Fractured Atlas only and are tax-deductible to the extent permitted by law.</em></p>
+            <div class="modal-body" id="ajaxload">
             </div>            <!-- /modal-body -->
 </body>
 </html>
