@@ -3,18 +3,16 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <title>Remote file for Bootstrap Modal</title>
-       <script type="text/javascript">
-   $(document).ready(function() {
-          $.getJSON('http://blog.oneyearroadtrip.com/amazing-kids/?json=1', function(jd) {
-             $('#ajaxload').html(jd.page.content);
-          });
-   });
-   </script>
 </head>
 <body style="min-width:600px;">
 <div class="modal-body"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-	<div id="ajaxload">
+	<div id="ajaxload-kids">
 	</div>
 </div>            <!-- /modal-body -->
+       <script type="text/javascript">
+          $.getJSON('http://blog.oneyearroadtrip.com/amazing-kids/?json=1', function(jd) {
+             $('#ajaxload-kids').html(jd.page.content);
+          });
+   </script>
 </body>
 </html>
