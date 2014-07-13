@@ -283,6 +283,16 @@ p, span {
     color:#fff;
 }
 
+.land-sign {
+    display:block;
+    position:absolute;
+    top:25%;
+    left:25%;
+    background-image:url('../img/sign-logo2.png');
+    height:312px;
+    width:132px;
+}
+
 .carousel-control.left, .carousel-control.right {
     background-image:none !important;
 }
