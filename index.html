@@ -263,6 +263,7 @@
     <script src="js/bootstrap-modalmanager.js"></script>
 <script type="text/javascript">
 $(document).ready(function()
+
     {
     $("#family-link").hover(
       function () {
@@ -451,6 +452,9 @@ $('#roadschool-link').on('click', function(){
 
   setTimeout(function(){
      $roadschoolModal.load('pages/roadschool.html', '', function(){
+    $.getJSON('http://blog.oneyearroadtrip.com/about-roadschool/?json=1', function(jd) {
+        $('#ajaxload-roadschool').html(jd.page.content);
+    });
       $roadschoolModal.modal();
     });
   }, 0);
