@@ -2,7 +2,16 @@
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <title>Remote file for Bootstrap Modal</title>  
+  <title>Remote file for Bootstrap Modal</title>
+
+     <script type="text/javascript">
+   $(document).ready(function() {
+          $.getJSON('http://blog.oneyearroadtrip.com/about-one-year-road-trip/?json=1', function(jd) {
+             $('#ajaxload').html(jd.page.content);
+          });
+   });
+   </script>
+
 </head>
 <body>
             <div class="modal-header">
@@ -10,8 +19,10 @@
                  <h3 class="modal-title" style="text-align:center;">About One Year Road Trip</h3>
             </div>            <!-- /modal-header -->
             <div class="modal-body">
-            <div style="height: 500px; overflow: scroll;">
-<h4>Our Vision</h4>
+            <div id="ajaxload" style="height: 500px; overflow: scroll;">
+
+
+<!--<h4>Our Vision</h4>
 <p>To create a new generation of altruistic, empathetic, courageous people--a Generation of Generosity</p><br>
 <h4>Our Mission</h4>
 <p>To help kids realize their dreams of transforming their communities by providing resources for enacting change and inspiration from other Kid Change-Makers</p><br>
@@ -35,8 +46,8 @@
 <h4>Why Spend a Year on the Road?</h4>
 <p>We want to be “Change-Makers”, and that begins with an intentional, personal connection.</p>
 <p>As children, we parents -- Matt and Eva -- were dramatically shaped by experiences we had with our own families serving the poor face-to-face. We believe it is essential for our family to live a life of purposeful engagement. In order to understand these amazing children and their causes, we must plunge ourselves into their communities, and get to know these heroes of today’s Kid Nation -- those leading the way to a better tomorrow. One Year Road Trip will allow us to come alongside and illuminate kid-driven, life-giving causes all across the country, and further their impact in the world.</p>
-<p>There are a lot of stories to tell, and our lives will be changed in the process. We hope for a better future. And it all begins with an intentional, personal connection.</p><br>
-		</div>
+<p>There are a lot of stories to tell, and our lives will be changed in the process. We hope for a better future. And it all begins with an intentional, personal connection.</p><br> -->
+    </div>
     </div>            <!-- /modal-body -->
 </body>
 </html>
