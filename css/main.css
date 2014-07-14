@@ -47,7 +47,22 @@
     display:block;
     height:48px;
     width:48px;
+/* KILLING THIS MARGIN FOR THE IGG ICON -- UN-COMMENT AFTER IGG CAMPAIGN ENDS
     margin-top:41px;
+    -- NEW MARGIN BELOW */
+    margin-top:6px;
+}
+
+#igg-logo {
+    height:35px;
+    width:202px;
+    display:block;
+    background:url('../img/igg-202x70.png');
+    background-position: 0px 0px;
+}
+
+#igg-logo:hover {
+    background-position: 0px 35px;
 }
 
 .facebook {
