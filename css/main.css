@@ -1,6 +1,3 @@
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
 
 #header {
     position:fixed;
@@ -242,6 +239,23 @@
     background-image:url('../img/family-portrait.jpg');
     background-repeat:no-repeat;
 }
+
+#notebook {
+    position:fixed;
+    right:0px;
+    bottom:0px;
+    width:206px;
+    height:126px;
+    background-image:url('../img/notebook.png');
+    background-repeat:no-repeat;
+    background-position:0px 0px;
+}
+
+/*
+#notebook:hover {
+    background-position: 0px 90px;
+}
+*/
 
 #bobbles {
     position: absolute;

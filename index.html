@@ -140,7 +140,7 @@
 </div><!-- /.modal -->
 
 <!-- BLOG MODAL -->
-<div id="blog" class="modal fade">
+<div id="blog" class="modal fade" style="background-image:url('img/notebook_open.png');background-repeat:no-repeat;display:none;position:absolute;left:400px;min-width:890px;min-height:577px;overflow:scroll;border-radius:30px;">
   <div class="modal">
     <div class="modal-content">
     </div><!-- /.modal-content -->
@@ -240,6 +240,8 @@
 <a id="family-link" data-backdrop="false" data-toggle="modal"><div id="family-portrait">
 </div><!-- /family-portrait --></a>
 
+<div id="notebook"><a id="blog-link" data-toggle="modal" style="position:absolute;display:block;bottom:0px;height:120px;width:180px;"></a></div>
+
 <!-- FOR ADDING BOBBLE HEADS LATER, re-add the second dash in the closing comment brackets under each div
                     <div id="bobbles">
                         <a data-toggle="modal" data-backdrop="false" href="pages/matt.html" data-target="#matt"><div class="single-bobble">M
@@ -290,6 +292,14 @@ $(document).ready(function()
     $("#family-link").hover(
       function () {
          $("#readout").text("the Webb family");
+        },
+        function () {
+         $("#readout").text("");
+        }
+        );
+    $("#blog-link").hover(
+      function () {
+         $("#readout").text("blog");
         },
         function () {
          $("#readout").text("");
@@ -433,6 +443,20 @@ $('#about-link').on('click', function(){
   setTimeout(function(){
      $aboutModal.load('pages/about.html', '', function(){
       $aboutModal.modal();
+    });
+  }, 0);
+});
+</script> 
+
+<script id="blog-modal" type="text/javascript">
+var $blogModal = $('#blog');
+
+$('#blog-link').on('click', function(){
+  // create the backdrop and wait for next modal to be triggered
+
+  setTimeout(function(){
+     $blogModal.load('pages/blog.html', '', function(){
+      $blogModal.modal();
     });
   }, 0);
 });

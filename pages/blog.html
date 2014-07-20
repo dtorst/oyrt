@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Remote file for Bootstrap Modal</title>
+</head>
+<body>
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                 <h3 class="modal-title" style="text-align:center;">Blog</h3>
+            </div>            <!-- /modal-header -->
+            <div class="modal-body">
+            <div id="ajaxload-blog" style="height: 460px; overflow: scroll;">
+<!--              <h3 class="blog-title"></h3>
+              <div class="blog-content"></div> -->
+    </div>
+    </div>            <!-- /modal-body -->
+     <script type="text/javascript">
+          $.getJSON('http://blog.oneyearroadtrip.com/api/get_category_posts/?slug=blog&count=4', function(jd) {
+            $.each(jd.posts, function(i,post){
+        var dateFormat = post.date;
+//        var dateFormat = $.datepicker.formatDate('MM dd, yy', new Date(dateFormat));
+        //alert(dateFormat);
+   //     $(this).html(dateFormat + "<br>");
+
+             $('#ajaxload-blog').append("<h3>" + post.title + "</h3>");
+             $('#ajaxload-blog').append("<span>Posted on " + dateFormat + "</span><br>");
+             $('#ajaxload-blog').append("<div>" + post.content + "</div><hr>");
+            });
+          });
+   </script>
+</body>
+</html>
