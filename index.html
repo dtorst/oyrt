@@ -139,6 +139,14 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+<!-- TEAM MODAL -->
+<div id="team" class="modal fade" data-backdrop="false" style="position:absolute;top:25%;left:45%;min-width:650px;">
+  <div class="modal">
+    <div class="modal-content">
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
 <!-- BLOG MODAL -->
 <div id="blog" class="modal fade" style="background-image:url('img/notebook_open.png');background-repeat:no-repeat;display:none;position:absolute;left:450px;min-width:890px;min-height:577px;overflow:scroll;border-radius:30px;">
   <div class="modal">
@@ -481,15 +489,15 @@ $('#support-link').on('click', function(){
 });
 </script> 
 
-<script id="blog-modal" type="text/javascript">
-var $blogModal = $('#blog');
+<script id="team-modal" type="text/javascript">
+var $teamModal = $('#team');
 
 $('#team-link').on('click', function(){
   // create the backdrop and wait for next modal to be triggered
 
   setTimeout(function(){
-     $blogModal.load('pages/team.html', '', function(){
-      $blogModal.modal();
+     $teamModal.load('pages/team.html', '', function(){
+      $teamModal.modal();
     });
   }, 0);
 });
