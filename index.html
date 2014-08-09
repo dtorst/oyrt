@@ -11,6 +11,7 @@
     <link href="css/bootstrap-modal-bs3patch.css" rel="stylesheet">
     <link href="css/bootstrap-modal.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
 <link href='http://fonts.googleapis.com/css?family=Special+Elite|Satisfy|Raleway:400,700' rel='stylesheet' type='text/css'>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -75,18 +76,53 @@
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="6000">
       <div class="carousel-inner">
         <div class="item active">
-          <div class="land-slide first">
-            <div class="land-sign"></div>
+          <div class="land-slide" id="first-slide">
+            <div class="land-sign animated swing-bottom"></div>
+            <div id="bear-box">
+            <div id="bear" class="animated vertical-shake"></div>
+          </div>
           </div>
         </div>
         <div class="item">
-          <img src="img/desert-1300.jpg" alt="Second slide">
+          <div class="land-slide" id="second-slide">
+            <div id="sun" class="animated fadeInDown"></div>
+            <div id="cloud1" class="animated fadeInRight"></div>
+            <div id="cloud2" class="animated fadeInLeft"></div>
+            <div id="cactus-1" class="cactus animated fadeInUp"></div>
+            <div id="cactus-2" class="cactus animated fadeInUp"></div>
+            <div id="cactus-3" class="cactus animated fadeInUp"></div>
+          </div>
         </div>
         <div class="item">
-          <img src="img/river-1300.jpg" alt="Third slide">
+          <div class="land-slide" id="third-slide">
+            <div id="cloud1b" class="animated rollIn"></div>
+            <div id="cloud2b" class="animated rollIn"></div>
+            <div id="cloud3b" class="animated rollIn"></div>
+            <div id="crab-box" class="animated wobble"><div id="crab" class="animated zoomIn"></div></div>
+            <div id="birds" class="animated lightSpeedIn"></div>
+          </div>
         </div>
         <div class="item">
-          <img src="img/farm-1300.jpg" alt="Fourth slide">
+          <div class="land-slide" id="fourth-slide">
+            <div id="tractor" class="animated bounceInLeft"></div>
+            <div id="barn" class="animated bounceInUp"></div>
+            <div class="crop animated fadeInUp" style="top:37%;left:2%;"></div>
+            <div class="crop animated fadeInUp" style="top:64%;left:4%;"></div>
+            <div class="crop animated fadeInUp" style="top:37%;left:9%;"></div>
+            <div class="crop animated fadeInUp" style="top:60%;left:13%;"></div>
+            <div class="crop animated fadeInUp" style="top:37%;left:14%;-webkit-animation-delay: 200ms;"></div>
+            <div class="crop animated fadeInUp" style="top:56%;left:18%;z-index:11;-webkit-animation-delay: 200ms;"></div>
+            <div class="crop animated fadeInUp" style="top:59%;left:23%;-webkit-animation-delay: 200ms;"></div>
+            <div class="crop animated fadeInUp" style="top:50%;left:26%;-webkit-animation-delay: 200ms;"></div>
+            <div class="crop animated fadeInUp" style="top:40%;left:37%;-webkit-animation-delay: 400ms;"></div>
+            <div class="crop animated fadeInUp" style="top:40%;left:41%;-webkit-animation-delay: 400ms;"></div>
+            <div class="crop animated fadeInUp" style="top:37%;left:53%;-webkit-animation-delay: 400ms;"></div>
+            <div class="crop animated fadeInUp" style="top:37%;left:59%;-webkit-animation-delay: 400ms;"></div>
+            <div class="crop animated fadeInUp" style="top:50%;left:73%;-webkit-animation-delay: 600ms;"></div>
+            <div class="crop animated fadeInUp" style="top:37%;left:65%;-webkit-animation-delay: 600ms;"></div>
+            <div class="crop animated fadeInUp" style="top:45%;left:85%;-webkit-animation-delay: 600ms;"></div>
+            <div class="crop animated fadeInUp" style="top:45%;left:92%;-webkit-animation-delay: 600ms;"></div>
+          </div>
         </div>
       </div>
       <ol class="carousel-indicators" style="z-index:1000;top:180px;position:fixed;">
@@ -177,10 +213,10 @@
 <!--   this is the original link that was in the steering wheel section, the "about the bus" page             <a data-toggle="modal" data-backdrop="false" href="pages/bus.html" data-target="#bus"> -->
 
 <div class="left-footer-element" id="left-footer-right">
-                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                    <a id="left-turn" class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left"></span>
       </a>
-      <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+      <a id="right-turn" class="right carousel-control" href="#carousel-example-generic" data-slide="next">
         <span class="glyphicon glyphicon-chevron-right"></span>
       </a>
                 </div><!--/left-footer-right--</a> -->
@@ -210,20 +246,6 @@
 
 <div id="notebook"><a id="blog-link" data-toggle="modal" style="position:absolute;display:block;bottom:0px;height:120px;width:180px;"></a></div>
 
-<!-- FOR ADDING BOBBLE HEADS LATER, re-add the second dash in the closing comment brackets under each div
-                    <div id="bobbles">
-                        <a data-toggle="modal" data-backdrop="false" href="pages/matt.html" data-target="#matt"><div class="single-bobble">M
-                        </div><!--/single-bobble 1-></a>
-                        <a data-toggle="modal" data-backdrop="false" href="pages/eva.html" data-target="#eva"><div class="single-bobble">E
-                        </div><!--/single-bobble 2-></a>
-                        <a data-toggle="modal" data-backdrop="false" href="pages/jack.html" data-target="#jack"><div class="single-bobble">J
-                        </div><!--/single-bobble 3-></a>
-                        <a data-toggle="modal" data-backdrop="false" href="pages/solveig.html" data-target="#solveig"><div class="single-bobble">S
-                        </div><!--/single-bobble 4-></a>
-                        <a data-toggle="modal" data-backdrop="false" href="pages/evie.html" data-target="#evie"><div class="single-bobble">E
-                        </div><!--/single-bobble 5-></a>
-                    </div><!--/bobble-->
-<!-- /BOBBLES -->
 
                 </div><!--/right-footer-element-->
             </div><!-- /footer-elements-right -->
@@ -254,9 +276,53 @@ var $iggModal = $('#igg-modal');
 
 
 <script type="text/javascript">
-$(document).ready(function()
+$(document).ready(function() {
 
-    {
+$('#left-turn').on('click', function(){
+
+  // create the backdrop and wait for next modal to be triggered
+$('#left-footer-right').animate({ borderSpacing:-90 }, {
+      step: function(now,fx) {
+      $(this).css('-webkit-transform','rotate('+now+'deg)'); 
+      $(this).css('-moz-transform','rotate('+now+'deg)');
+      $(this).css('transform','rotate('+now+'deg)');
+    },
+    duration:'fast'
+},'linear')
+.delay( 300 )
+.animate({ borderSpacing: 0 }, {
+      step: function(now,fx) {
+      $(this).css('-webkit-transform','rotate('+now+'deg)'); 
+      $(this).css('-moz-transform','rotate('+now+'deg)');
+      $(this).css('transform','rotate('+now+'deg)');
+    },
+    duration:'fast'
+},'linear');
+});
+
+
+$('#right-turn').on('click', function(){
+
+  // create the backdrop and wait for next modal to be triggered
+$('#left-footer-right').animate({ borderSpacing: 90 }, {
+      step: function(now,fx) {
+      $(this).css('-webkit-transform','rotate('+now+'deg)'); 
+      $(this).css('-moz-transform','rotate('+now+'deg)');
+      $(this).css('transform','rotate('+now+'deg)');
+    },
+    duration:'fast'
+},'linear')
+.delay( 300 )
+.animate({ borderSpacing: 0 }, {
+      step: function(now,fx) {
+      $(this).css('-webkit-transform','rotate('+now+'deg)'); 
+      $(this).css('-moz-transform','rotate('+now+'deg)');
+      $(this).css('transform','rotate('+now+'deg)');
+    },
+    duration:'fast'
+},'linear');
+});
+
     $("#family-link").hover(
       function () {
          $("#readout").text("the Webb family");

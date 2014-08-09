@@ -176,7 +176,7 @@
     bottom:0px;
     left:230px;
     display:block;
-    background-image:url('../img/steering-wheel.png');
+    background-image:url('../img/steering-wheel2.png');
     float:left;
     height:200px;
     width:204px;
@@ -197,6 +197,7 @@
     left:510px;
     bottom:85px;
     height:60px;
+    clear:both;
 }
 
 .radio-button {
@@ -304,22 +305,220 @@ p, span {
     width:99%;
 }
 
-.land-slide.first {
+.land-slide {
     height:720px;
     width:1300px;
     display:block;
-    background-image:url('../img/rockies-1300.jpg');
     color:#fff;
+}
+
+#first-slide {
+    background-image:url('../img/rockies-1300.jpg');
+}
+
+#second-slide {
+    background-image:url('../img/desert-1300.jpg');
+}
+
+#third-slide {
+    background-image:url('../img/river-1300.jpg');
+}
+
+#fourth-slide {
+    background-image:url('../img/farm-1300.jpg');
 }
 
 .land-sign {
     display:block;
     position:absolute;
     top:25%;
-    left:25%;
+    left:65%;
     background-image:url('../img/sign-logo2.png');
     height:312px;
     width:132px;
+}
+
+@-webkit-keyframes animatedBear {
+    from { left: 0%; }
+    to { left: 15%; }
+}
+
+#bear-box {
+    -webkit-animation: animatedBear 5s;
+    -webkit-animation-iteration-count: 1;
+    position: absolute;
+    top:45%;
+    left:15%;
+}
+
+#bear {
+    display: block;
+    height: 161px;
+    width:194px;
+    background-image:url('../img/bear.png');
+    -webkit-animation-duration: 4s;
+    -webkit-animation-iteration-count:1;    
+}
+
+.cactus {
+    display:block;
+    position: absolute;
+    z-index:3;
+}
+
+#cactus-1 {
+    width:165px;
+    height:425px;
+    background-image:url('../img/cactus1.png');
+    top:29%;
+    left:4%;
+}
+
+#cactus-2 {
+    height:310px;
+    width:152px;
+    background-image:url('../img/cactus2.png');
+    top:34%;
+    left:72%;
+}
+
+#cactus-3 {
+    height:165px;
+    width:81px;
+    background-image:url('../img/cactus3.png');
+    top:40%;
+    left:90%;
+}
+
+#sun {
+    display:block;
+    z-index:1;
+    width:216px;
+    height:219px;
+    background-image:url('../img/sun.png');
+    position: absolute;
+    top:4%;
+    left:15%;
+}
+
+#cloud1 {
+    display: block;
+    position: absolute;
+    top:8%;
+    left:85%;
+    background-image:url('../img/cloud1.png');
+    height:103px;
+    width:198px;
+}
+
+#cloud2 {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top:2%;
+    left:0%;
+    background-image:url('../img/cloud2.png');
+    height:352px;
+    width:411px;
+}
+
+#crab-box {
+    position: absolute;
+    top:52%;
+    left:20%;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay:600ms;
+}
+
+#crab {
+
+    background-image:url('../img/crab.png');
+    height:159px;
+    width:202px;
+    -webkit-animation-delay: 600ms;
+}
+
+#birds {
+    position: absolute;
+    background-image:url('../img/birds.png');
+    height:100px;
+    width:334px;
+    top:10%;
+    left:70%;
+    -webkit-animation-delay: 1s;
+}
+
+#deer {
+    position: absolute;
+    background-image:url('../img/deer.png');
+    height:243px;
+    width:295px;
+    top:50%;
+    left:20%;
+}
+
+#cloud1b {
+    display: block;
+    position: absolute;
+    top:18%;
+    left:3%;
+    background-image:url('../img/cloud-1b.png');
+    height:137px;
+    width:164px;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 600ms;
+}
+
+#cloud2b {
+    display: block;
+    position: absolute;
+    top:11%;
+    left:18%;
+    background-image:url('../img/cloud-2b.png');
+    height:112px;
+    width:130px;
+    -webkit-animation-delay: 300ms;
+    -webkit-animation-duration: 1s;
+}
+
+#cloud3b {
+    display: block;
+    position: absolute;
+    top:14%;
+    left:31%;
+    background-image:url('../img/cloud-3b.png');
+    height:62px;
+    width:74px;
+    -webkit-animation-duration: 1s;
+}
+
+#tractor {
+    position: absolute;
+    z-index: 10;
+    top:30%;
+    left:3%;
+    background-image:url('../img/tractor.png');
+    height:213px;
+    width:245px;
+}
+
+#barn {
+    position: absolute;
+    z-index:1;
+    height:168px;
+    width:245px;
+    background-image:url('../img/barn.png');
+    top:29%;
+    left:78%;
+}
+
+.crop {
+    position: absolute;
+    z-index: 2;
+    height: 100px;
+    width: 66px;
+    background-image:url('../img/crop.png');
+    -webkit-animation-duration: 1s;
 }
 
 .carousel-control.left, .carousel-control.right {
