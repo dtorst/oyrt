@@ -193,8 +193,8 @@
 }
 
 #buttons {
-    position: fixed;
-    left:510px;
+    position: absolute;
+    left:50px;
     bottom:85px;
     height:60px;
 }
@@ -207,7 +207,6 @@
     margin:10px 10px;
     background-image:url('../img/knob-sprite.png');
     background-position: 0px 30px;
-    clear:both;
 }
 
 .radio-button:hover,.radio-button:active {
