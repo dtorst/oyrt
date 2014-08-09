@@ -193,8 +193,8 @@
 }
 
 #buttons {
-    position: absolute;
-    left:0px;
+    position: fixed;
+    left:470px;
     bottom:75px;
     height:60px;
 }
