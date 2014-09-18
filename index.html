@@ -167,6 +167,14 @@
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+<!-- SPONSORS MODAL -->
+<div id="sponsors" class="modal fade" data-backdrop="false" style="position:absolute;top:25%;left:45%;min-width:350px;">
+  <div class="modal">
+    <div class="modal-content">
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
 <!-- TEAM MODAL -->
 <div id="team" class="modal fade" data-backdrop="false" style="position:absolute;top:25%;left:45%;min-width:650px;">
   <div class="modal">
@@ -237,7 +245,7 @@
 </div><!-- /family-portrait --></a>
 
 <div id="notebook"><a id="blog-link" data-toggle="modal" style="position:absolute;display:block;bottom:0px;height:120px;width:180px;"></a></div>
-
+<div id="glovebox"> <a id="sponsors-link" data-toggle="modal" style="position:absolute;display:block;height:61px;margin-left:80px;width:169px;background-image:url('img/glovebox.png');bottom:20px;"></a> </div>
 
                 </div><!--/right-footer-element-->
             </div><!-- /footer-elements-right -->
@@ -373,6 +381,14 @@ $('#left-footer-right').animate({ borderSpacing: 90 }, {
     $("#about-link").hover(
       function () {
          $("#readout").text("about OYRT");
+        },
+        function () {
+         $("#readout").text("");
+        }
+        );
+    $("#sponsors-link").hover(
+      function () {
+         $("#readout").text("our sponsors");
         },
         function () {
          $("#readout").text("");
@@ -533,6 +549,20 @@ $('#support-link').on('click', function(){
   setTimeout(function(){
      $supportModal.load('pages/support.html', '', function(){
       $supportModal.modal();
+    });
+  }, 0);
+});
+</script> 
+
+<script id="sponsors-modal" type="text/javascript">
+var $sponsorsModal = $('#sponsors');
+
+$('#sponsors-link').on('click', function(){
+  // create the backdrop and wait for next modal to be triggered
+
+  setTimeout(function(){
+     $sponsorsModal.load('pages/sponsors.html', '', function(){
+      $sponsorsModal.modal();
     });
   }, 0);
 });
