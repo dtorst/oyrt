@@ -33,7 +33,7 @@ echo "<stong>Message:</strong> ".$message."<br>";
  
 //generate email and send!
 $to = $myemail;
-$email_subject = "OYRT.com message from $name";
+$email_subject = "OYRT Message Received From $name";
 $email_body = "New message from the contact page on oneyearroadtrip.com! ".
 " Here are the details:\n Name: $name \n ".
 "Email: $email\n Message \n $message";

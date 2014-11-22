@@ -121,11 +121,11 @@ $(document).ready(function () {
                 // $("#thanks").html(msg) //hide button and show thank you
                 $("#contact").modal('hide'); //hide popup
                 $('#contact').on('hidden.bs.modal', function () {
-                    window.alert("Thanks! Our state of the art tin can technology will deliver your message our way!");
+                    window.alert("Thanks! Your message has been sent through our state-of-the-art tin can and string system.");
                 });
             },
             error: function(){
-                alert("failure");
+                alert("Whoops, something went wrong! Can you try refreshing and submitting your message again?");
             }
         });
     });
