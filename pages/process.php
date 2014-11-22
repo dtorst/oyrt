@@ -19,7 +19,7 @@
 
 
 //add the recipient's address here
-$myemail = 'davidtorstenson@gmail.com';
+$myemail = 'info@oneyearroadtrip.com';
  
 //grab named inputs from html then post to #thanks
 if (isset($_POST['name'])) {
