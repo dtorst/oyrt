@@ -2,11 +2,10 @@
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <title>Remote file for Bootstrap Modal</title>
-</head>
-<body>
-            <style type="text/css">
-            form {
+  <title>Remote file for Bootstrap Modal</title>  
+
+  			<style type="text/css">
+			form {
     margin:0
 }
 form label {
@@ -82,7 +81,7 @@ fieldset {
 }
 #error span p {
     color:#c0392b
-}       </style>
+}		</style>
 </head>
 <body>
 
@@ -96,42 +95,94 @@ fieldset {
 <p>Have a question or idea for One Year Road Trip? Let us know!</p>
 
 <p>Please enter your contact details and a short message below and we will reply as soon as possible.</p>
+				<form id="contact" name="contact" method="post" novalidate="novalidate">
+    <fieldset>
+        <label for="name" id="name">Name<span class="required">*</span>
+        </label>
+        <input type="text" name="name" id="name" size="30" value="" required="">
+        <label for="email" id="email">Email<span class="required">*</span>
+        </label>
+        <input type="text" name="email" id="email" size="30" value="" required="">
+        <label for="phone" id="phone">Phone</label>
+        <input type="text" name="phone" id="phone" size="30" value="">
+        <label for="Message" id="message">Message<span class="required">*</span>
+        </label>
+        <input type="text" name="answer" value="" required=""></br>
+        <input id="submit" type="submit" name="submit" value="Send">
+    </fieldset>
+</form>
 
-        <form class="contact" name="contact">
-            <label for="name">Your Name</label>
-            <input type="text" name="name" class="input-xlarge"><br>
-            <label for="email">Your E-mail</label>
-            <input type="email" name="email" class="input-xlarge"><br>
-            <label for="message">Enter a Message</label>
-            <textarea name="message" class="input-xlarge"></textarea>
-        </form>
-    </div>
-    <div class="modal-footer">
-        <input class="btn btn-success" type="submit" value="Send!" id="submit">
-    </div>
+<div id="success">
+    <span class="green textcenter">
+        <p>Thanks! Your message is on its way through our advanced tin can-and-string system.</p>
+    </span>
+</div>
 
-<script>
-$(document).ready(function () {
-    $("input#submit").click(function(){
-        $.ajax({
-            type: "POST",
-            url: "pages/process.php", //process to mail
-            data: $('form.contact').serialize(),
-            success: function(){
-                // $("#thanks").html(msg) //hide button and show thank you
-                $("#contact").modal('hide'); //hide popup
-                $('#contact').on('hidden.bs.modal', function () {
-                    window.alert("Thanks! Our state of the art tin can technology will deliver your message our way!");
-                });
+<div id="error">
+    <span>
+        <p>Whoops. Something went wrong; can you try refreshing and submitting the form again?</p>
+    </span>
+</div>
+
+
+
+            </div>            <!-- /modal-body -->
+	<!-- Vendor JS -->
+<script type="text/javascript">
+jQuery.validator.addMethod('answercheck', function (value, element) {
+        return this.optional(element) || /^\bcat\b$/.test(value);
+    }, "type the correct answer -_-");
+
+// validate contact form
+$(function() {
+    $('#contact').validate({
+        rules: {
+            name: {
+                required: true,
+                minlength: 2
             },
-            error: function(){
-                alert("failure");
+            email: {
+                required: true,
+                email: true
+            },
+            message: {
+                required: true
             }
-        });
+        },
+        messages: {
+            name: {
+                required: "Oops, didn't catch your name. You might need to speak up (it is a tin can attached to a piece of string, after all).",
+                minlength: "(your name must consist of at least 2 characters)"
+            },
+            email: {
+                required: "Oops, didn't catch your e-mail. You might need to speak up (it is a tin can attached to a piece of string, after all)."
+            },
+            message: {
+                required: "Oops, didn't catch that. You might need to speak up (it is a tin can attached to a piece of string, after all)."
+            }
+        },
+        submitHandler: function(form) {
+            $(form).ajaxSubmit({
+                type:"POST",
+                data: $(form).serialize(),
+                url:"pages/process.php",
+                success: function() {
+                    $('#contact :input').attr('disabled', 'disabled');
+                    $('#contact').fadeTo( "slow", 0.15, function() {
+                        $(this).find(':input').attr('disabled', 'disabled');
+                        $(this).find('label').css('cursor','default');
+                        $('#success').fadeIn();
+                    });
+                },
+                error: function() {
+                    $('#contact').fadeTo( "slow", 0.15, function() {
+                        $('#error').fadeIn();
+                    });
+                }
+            });
+        }
     });
 });
 </script>
-
-
 </body>
 </html>
